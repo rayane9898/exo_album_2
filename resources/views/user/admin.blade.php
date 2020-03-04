@@ -12,36 +12,37 @@
     <section class="container">
         <h1 class="text-center my-5"></h1>
         <div class="text-center my-5">
-        <a class="text-center" href=""><button type="button" class="btn btn-outline-primary">Ajouter</button></a>
+        <a class="text-center" href="{{route("createAdmin")}}"><button type="button" class="btn btn-outline-primary">Ajouter</button></a>
         </div>
         <table class="table table-primary table-hover">
             <thead>
                 <tr>
                     <th colspan="6">
 
-                        <h3 class="text-center">Tableau dynamique d'Albums</h3>
+                        <h3 class="text-center">Tableau dynamique d'Users</h3>
                     </th>
                 </tr>
                 <tr>
                     <th>Id</th>
                     <th>Name</th>
-                    <th>Description</th>
-                    <th>id_User</th>
+                    <th>Email</th>
+
                     <th class="text-center" colspan="2">Action</th>
                 </tr>
             </thead>
             <tbody>
+                @foreach ($users as $user)
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <td>{{$user->id}}</td>
+                <td>{{$user->name}}</td>
+                <td>{{$user->email}}</td>
                     <td class="text-center"> 
                         <a href=""><button type="button" class="btn btn-success">Modifier</button></a></td>
                     <td class="text-center">
                         <a href=""><button type="button" class="btn btn-danger">Supprimer</button></a>
                     </td>
-                </tr>
+                </tr>    
+                @endforeach
             </tbody>
         </table>  
 @endsection

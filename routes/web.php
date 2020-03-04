@@ -18,4 +18,6 @@ Route::get('/', function () {
 })->name("home");
 
 Route::get("/admin/user","UserController@index")->name("userAdmin");
+Route::get("/admin/create", "UserController@create")->name("createAdmin");
+Route::post("/admin/store", "UserController@store")->name("storeAdmin");
 

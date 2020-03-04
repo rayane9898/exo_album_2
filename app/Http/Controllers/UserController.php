@@ -26,6 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
+        return view("/user/create");
         //
     }
 
@@ -37,6 +38,14 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+       
+        $user = new User();
+        $user->name=$request->input("name");
+        $user->email=$request->input("email");
+        $user->password=bcrypt($request->input("passsword"));
+        // dd($user);
+        $user->save();
+        return redirect()->route("userAdmin");
         //
     }
 
