@@ -37,7 +37,7 @@
 
     {{-- nav --}}
 
-    <main>
+    <main class="text-center">
         <section id="title">
             <h1>Administration</h1>
             <h2>@yield('titleH2')</h2>
@@ -48,7 +48,6 @@
     {{-- script --}}
 <script src="{{ asset("js/app.js") }}"></script>
     {{-- script --}}
-
     
 </body>
 </html>
