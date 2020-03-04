@@ -8,8 +8,9 @@
     Create Users
 @endsection
 
+
 @section('content')
-<form action="{{route('storeAdmin')}}" method="POST">
+<form action="{{route('storeUser')}}" method="POST">
     @csrf
     <section class="text-center">
         <div class="container">

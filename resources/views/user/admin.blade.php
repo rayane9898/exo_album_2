@@ -12,7 +12,7 @@
     <section class="container">
         <h1 class="text-center my-5"></h1>
         <div class="text-center my-5">
-        <a class="text-center" href="{{route("createAdmin")}}"><button type="button" class="btn btn-outline-primary">Ajouter</button></a>
+        <a class="text-center" href="{{route("createUser")}}"><button type="button" class="btn btn-outline-primary">Ajouter</button></a>
         </div>
         <table class="table table-primary table-hover">
             <thead>
@@ -37,9 +37,9 @@
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
                     <td class="text-center"> 
-                        <a href=""><button type="button" class="btn btn-success">Modifier</button></a></td>
+                    <a href="{{route("editUser", $user->id)}}"><button type="button" class="btn btn-success">Modifier</button></a></td>
                     <td class="text-center">
-                        <a href=""><button type="button" class="btn btn-danger">Supprimer</button></a>
+                    <a href="{{route("destroyUser", $user->id)}}"><button type="button" class="btn btn-danger">Supprimer</button></a>
                     </td>
                 </tr>    
                 @endforeach

@@ -69,6 +69,8 @@ class UserController extends Controller
     public function edit($id)
     {
         //
+        $user=User::find($id);
+        return view('/user/edit', compact('user'));
     }
 
     /**
@@ -81,6 +83,16 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $user = User::find($id);
+        $user->name=$request->input("name");
+        $user->email=$request->input("email");
+        if (!empty($request->password)) {
+            $user->password=bcrypt($request->input("passsword"));
+        }
+        $user->save();
+        return redirect()->route("userAdmin");
+
+
     }
 
     /**
@@ -90,7 +102,11 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
+
     {
+        $user=User::find($id);
+        $user->delete();
+        return redirect()-> route("userAdmin");
         //
     }
 }

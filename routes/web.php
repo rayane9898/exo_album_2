@@ -18,6 +18,9 @@ Route::get('/', function () {
 })->name("home");
 
 Route::get("/admin/user","UserController@index")->name("userAdmin");
-Route::get("/admin/create", "UserController@create")->name("createAdmin");
-Route::post("/admin/store", "UserController@store")->name("storeAdmin");
+Route::get("/admin/create", "UserController@create")->name("createUser");
+Route::post("/admin/store", "UserController@store")->name("storeUser");
+Route::get("/admin/edit/{id}", "UserController@edit")->name("editUser");
+Route::post("/admin/update/{id}", "UserController@update")->name("updateUser");
+Route::get("/admin/destroy/{id}", "UserController@destroy")->name("destroyUser");
 
