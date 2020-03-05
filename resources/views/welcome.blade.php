@@ -72,7 +72,7 @@
                 </div>
                 <div class="links">
                 <a href="{{ route("userAdmin") }}">administration (user)</a>
-                <a href="{{route("AlbumAdmin")}}">administration (album)</a>
+                <a href="{{route("albumAdmin")}}">administration (album)</a>
                 </div>
             </div>
         </div>

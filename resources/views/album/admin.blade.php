@@ -12,7 +12,7 @@
     <section class="container">
         <h1 class="text-center my-5"></h1>
         <div class="text-center my-5">
-        <a class="text-center" href=""><button type="button" class="btn btn-outline-primary">Ajouter</button></a>
+        <a class="text-center" href="{{route("createAlbum")}}"><button type="button" class="btn btn-outline-primary">Ajouter</button></a>
         </div>
         <table class="table table-primary table-hover">
             <thead>

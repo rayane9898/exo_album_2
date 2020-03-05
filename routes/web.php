@@ -24,5 +24,7 @@ Route::get("/admin/edit/{id}", "UserController@edit")->name("editUser");
 Route::post("/admin/update/{id}", "UserController@update")->name("updateUser");
 Route::get("/admin/destroy/{id}", "UserController@destroy")->name("destroyUser");
 
-Route::get("/admin/albuù","AlbumController@index")->name("AlbumAdmin");
+Route::get("/admin/album","AlbumController@index")->name("albumAdmin");
+Route::get("/admin/createAlbum", "AlbumController@create")->name("createAlbum");
+
 

@@ -14,5 +14,11 @@ class AlbumController extends Controller
         $albums = Album::all();
         return view ("/album/admin", compact("albums"));
     }
+    
+    public function create()
+    {
+        return view("/album/create");
+    }
+
     //
 }
