@@ -27,7 +27,7 @@
                     <th>Name</th>
                     <th>Email</th>
 
-                    <th class="text-center" colspan="2">Action</th>
+                    <th class="text-center" colspan="3">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,6 +38,9 @@
                 <td>{{$user->email}}</td>
                     <td class="text-center"> 
                     <a href="{{route("editUser", $user->id)}}"><button type="button" class="btn btn-success">Modifier</button></a></td>
+                    <td class="text-center">
+                        <a href=""><button type="button" class="btn btn-primary">Show</button></a>
+                        </td>
                     <td class="text-center">
                     <a href="{{route("destroyUser", $user->id)}}"><button type="button" class="btn btn-danger">Supprimer</button></a>
                     </td>

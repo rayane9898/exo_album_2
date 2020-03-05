@@ -20,15 +20,15 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{route("home")}}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown active">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Administration
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="">Utilisateurs</a>
-                        <a class="dropdown-item" href="">Album</a>
+                    <a class="dropdown-item" href="{{route("userAdmin")}}">Utilisateurs</a>
+                    <a class="dropdown-item" href="{{route("albumAdmin")}}">Album</a>
                     </div>
                 </li>
             </ul>

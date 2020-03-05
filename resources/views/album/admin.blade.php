@@ -32,19 +32,19 @@
                 </tr>
             </thead>
             <tbody>
-                {{-- @foreach ($albums as $album) --}}
+                @foreach ($albums as $album)
                 <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{$album->id}}</td>
+                <td>{{$album->nom}}</td>
+                <td>{{$album->description}}</td>
+                <td>{{$album->id_user}}</td>
                     <td class="text-center"> 
                     <a href=""><button type="button" class="btn btn-success">Modifier</button></a></td>
                     <td class="text-center">
                     <a href=""><button type="button" class="btn btn-danger">Supprimer</button></a>
                     </td>
                 </tr>    
-                {{-- @endforeach --}}
+                @endforeach
             </tbody>
         </table>  
 @endsection
