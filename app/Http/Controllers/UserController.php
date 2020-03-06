@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Album;
 
 class UserController extends Controller
 {
@@ -58,6 +59,9 @@ class UserController extends Controller
     public function show($id)
     {
         //
+        $albums=Album::all()->where("id_user", $id);
+        $user=User::find($id);
+        return view("/user/show", compact("albums", "user"));
     }
 
     /**

@@ -71,8 +71,9 @@
                     Project Album
                 </div>
                 <div class="links">
-                <a href="{{ route("userAdmin") }}">administration (user)</a>
+                <a href="{{route("userAdmin")}}">administration (user)</a>
                 <a href="{{route("albumAdmin")}}">administration (album)</a>
+                <a href="{{route("photoAdmin")}}">administration (photo)</a>
                 </div>
             </div>
         </div>

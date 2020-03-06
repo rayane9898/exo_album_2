@@ -39,7 +39,7 @@
                     <td class="text-center"> 
                     <a href="{{route("editUser", $user->id)}}"><button type="button" class="btn btn-success">Modifier</button></a></td>
                     <td class="text-center">
-                        <a href=""><button type="button" class="btn btn-primary">Show</button></a>
+                    <a href="{{route("showAlbum",$user->id)}}"><button type="button" class="btn btn-primary">Show</button></a>
                         </td>
                     <td class="text-center">
                     <a href="{{route("destroyUser", $user->id)}}"><button type="button" class="btn btn-danger">Supprimer</button></a>
