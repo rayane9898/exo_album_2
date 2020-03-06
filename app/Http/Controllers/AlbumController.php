@@ -35,6 +35,11 @@ class AlbumController extends Controller
         $album->save();
         return redirect()->route("albumAdmin");
     }
+    public function destroy($id){
+        $album=Album::find($id);
+        $album->delete();
+        return redirect()->route("albumAdmin");
+    }
 
     //
 }

@@ -29,8 +29,13 @@ Route::get("/admin/album","AlbumController@index")->name("albumAdmin");
 Route::get("/admin/createAlbum", "AlbumController@create")->name("createAlbum");
 Route::post("/admin/storeAlbum", "AlbumController@store")->name('storeAlbum');
 Route::get('/admin/showAlbum/{id}', "UserController@show")->name('showAlbum');
+Route::get("admin/destroyAlbum/{id}","AlbumController@destroy")->name("destroyAlbum");
 
 Route::get('/admin/photo', "PhotoController@index")->name("photoAdmin");
 Route::get('admin/createPhoto', "PhotoController@create")->name("createPhoto");
 Route::post("/admin/storePhoto", "PhotoController@store")->name("storePhoto");
-   
+Route::get("/admin/editPhoto/{id}", "PhotoController@edit")->name("editPhoto");
+Route::post("/admin/updatePhoto/{id}","PhotoController@update")->name("updatePhoto");
+Route::get("/admin/destroyPhoto/{id}","PhotoController@destroy")->name("destroyPhoto");
+
+  

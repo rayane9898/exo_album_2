@@ -41,9 +41,9 @@
                 <td>{{$photo->description}}</td>
                 <td>{{$photo->id_album}}</td>
                     <td class="text-center"> 
-                    <a href=""><button type="button" class="btn btn-success">Modifier</button></a></td>
+                    <a href="{{route("editPhoto", $photo->id)}}"><button type="button" class="btn btn-success">Modifier</button></a></td>
                     <td class="text-center">
-                    <a href=""><button type="button" class="btn btn-danger">Supprimer</button></a>
+                    <a href="{{route("destroyPhoto", $photo->id)}}"><button type="button" class="btn btn-danger">Supprimer</button></a>
                     </td>
                 </tr>    
                 @endforeach

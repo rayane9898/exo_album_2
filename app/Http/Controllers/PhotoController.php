@@ -29,5 +29,28 @@ class PhotoController extends Controller
 
 
     }
+    public function edit($id){
+        $photos=Photo::find($id);
+        $albums=Album::all();
+        return view("/photo/edit", compact("photos", "albums"));
+    }
+
+    public function update(Request $request,$id){
+        $photos = Photo::find($id);
+        $photos->name=$request->input("name");
+        $photos->description=$request->input("description");
+        $photos->url=$request->input("url");
+        $photos->id_album=$request->input("id_album");
+        $photos->save();
+        return redirect()->route("photoAdmin");
+    }
+
+    public function destroy($id){
+
+        $photos=Photo::find($id);
+        $photos->delete();
+        return redirect()-> route("photoAdmin");
+    }
     //
 }
+

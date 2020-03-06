@@ -41,10 +41,10 @@
                     <td class="text-center"> 
                     <a href=""><button type="button" class="btn btn-success">Modifier</button></a></td>
                     <td class="text-center">
-                    <a href=""><button type="button" class="btn btn-danger">Supprimer</button></a>
+                    <a href="{{route('destroyAlbum', $album->id)}}"><button type="button" class="btn btn-danger">Supprimer</button></a>
                     </td>
                 </tr>    
                 @endforeach
             </tbody>
         </table>  
-@endsection
+@endsection   
